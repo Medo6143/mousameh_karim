@@ -209,6 +209,12 @@ export default function ProfilePage({
   const handleSend = async (directSend = false) => {
     if (!profile) return;
     
+    // Only saraha messages allowed without login
+    if (!user && selectedEmotion !== "saraha") {
+      showToast("عشان تبعت رسايل المصالحة والعتاب، لازم تسجل دخول 🙏", "warning");
+      return;
+    }
+    
     // Validate again if sending directly
     if (directSend) {
       if (!selectedEmotion) {
