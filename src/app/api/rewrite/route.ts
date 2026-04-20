@@ -11,8 +11,15 @@ export async function POST(req: Request): Promise<NextResponse> {
       );
     }
 
-    // Using the user-provided OpenRouter API Key
-    const apiKey = process.env.VITE_OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY || "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";
+    // Get API key from environment variable
+    const apiKey = process.env.VITE_OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY;
+    
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "OpenRouter API key not configured" },
+        { status: 500 }
+      );
+    }
 
     const emotionMap: Record<string, string> = {
       upset: "زعلان / عتاب بلطف",
