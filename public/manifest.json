@@ -1,0 +1,44 @@
+{
+  "name": "المسامح كريم",
+  "short_name": "مسامح",
+  "description": "منصة مصالحة اجتماعية — ابعت مشاعرك بأمان",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfbf7",
+  "theme_color": "#5f9ea0",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["social", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "صندوق الوارد",
+      "short_name": "الوارد",
+      "description": "شوف رسايلك",
+      "url": "/inbox",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    }
+  ]
+}
