@@ -1,0 +1,228 @@
+/* ===== Profile Page ===== */
+.profilePage {
+  padding-bottom: var(--space-3xl);
+}
+
+.profileHeader {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+}
+
+.profileAvatar {
+  margin: 0 auto var(--space-lg);
+  box-shadow: 0 0 0 4px var(--bg-primary), 0 0 0 6px rgba(232, 145, 90, 0.3);
+}
+
+.profileName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
+}
+
+.profileBio {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Message Form ===== */
+.messageForm {
+  padding: var(--space-xl) var(--space-xl) var(--space-2xl);
+  cursor: default;
+}
+
+.messageForm:hover {
+  transform: none;
+}
+
+.formTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.formSection {
+  margin-bottom: var(--space-xl);
+}
+
+.emotionGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-sm);
+}
+
+.charCount {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  direction: ltr;
+}
+
+/* Anonymous Toggle */
+.anonToggle {
+  display: flex;
+  gap: 0;
+  background: var(--bg-glass);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-card);
+  overflow: hidden;
+}
+
+.anonOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.anonActive {
+  background: rgba(232, 145, 90, 0.15);
+  color: var(--primary-light);
+}
+
+.anonHint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+}
+
+/* ===== Preview ===== */
+.previewSection {
+  margin-bottom: var(--space-xl);
+}
+
+.previewLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.previewBubble {
+  background: rgba(90, 232, 160, 0.06);
+  border: 1px solid rgba(90, 232, 160, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--text-primary);
+  animation: fadeInUp 0.5s ease;
+}
+
+.previewNote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: var(--space-md);
+}
+
+.previewActions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ===== Done State ===== */
+.doneCard {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+.doneIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.doneTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+}
+
+.doneText {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: var(--space-xl);
+}
+
+.doneActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Report */
+.reportSection {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.radioLabel:hover {
+  background: var(--bg-glass-hover);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.radioLabel input[type="radio"] {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .previewActions {
+    flex-direction: column;
+  }
+
+  .emotionGrid {
+    justify-content: center;
+  }
+}
